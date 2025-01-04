@@ -1,0 +1,89 @@
+.item{
+    width: 350px;
+}
+.item img{
+    width: 250px;
+}
+.item p{
+    margin: 6px 0px;
+}
+.item-prices{
+    display: flex;
+    gap: 20px;
+}
+.item-prices-new{
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+.item-price-old{
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.item:hover{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+@media(max-width:1280px){
+  .item{
+    width: 250px;
+    font-size: 14px;
+  }
+  .item img{
+    width: 250px;
+  }
+  .item-price-old{
+    font-size: 14px;
+  }
+}
+@media(max-width:1024px){
+    .item{
+        width: 170px;
+        font-size: 13px;
+    }
+    .item img{
+        width: 220px;
+    }
+    .item-price-old{
+        font-size: 13px;
+    }
+}
+@media(max-width:800px){
+    .item{
+        width: 150px;
+        font-size: 12px;
+    }
+    .item img{
+        width: 150px;
+    }
+    .item-price-old{
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px) {
+    .popular {
+        min-height: auto; /* Ensure flexibility */
+        padding: 15px; /* Add padding for spacing */
+        gap: 15px; /* Slightly increase gap */
+    }
+
+    .popular h1 {
+        font-size: 22px; /* Increase font size slightly for better readability */
+        margin-bottom: 10px; /* Add space below the heading */
+    }
+
+    .popular hr {
+        width: 100px;
+        height: 3px;
+        margin-bottom: 15px; /* Add space below the line */
+    }
+
+    .popular-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for better space usage */
+        gap: 10px; /* Reduce gap between items */
+        margin-top: 20px; /* Add consistent spacing above items */
+    }
+}

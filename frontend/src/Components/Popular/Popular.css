@@ -1,0 +1,88 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 90vh; /* Changed from height to min-height */
+    padding: 20px; /* Added padding for small screens */
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #252525;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on small screens */
+    gap: 30px;
+    justify-content: center; /* Centers items */
+}
+
+/* Medium Screens */
+@media (max-width: 1280px) {
+    .popular h1 {
+        font-size: 40px;
+    }
+    .popular hr {
+        width: 160px;
+        height: 4px;
+    }
+    .popular-item {
+        gap: 20px; /* Corrected selector */
+        margin-top: 30px;
+    }
+}
+
+/* Smaller Laptops and Tablets */
+@media (max-width: 1024px) {
+    .popular h1 {
+        font-size: 30px;
+    }
+    .popular hr {
+        width: 120px;
+        height: 3px;
+    }
+    .popular-item {
+        gap: 15px; /* Corrected selector */
+        margin-top: 20px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 800px) {
+    .popular {
+        gap: 6px;
+        padding: 10px; /* Add padding for small screens */
+    }
+    .popular h1 {
+        font-size: 25px; /* Increased font size for readability */
+    }
+    .popular hr {
+        width: 100px;
+    }
+    .popular-item {
+        gap: 10px; /* Adjusted gap */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 500px) {
+    .popular {
+        min-height: auto; /* Allows the content to grow */
+    }
+    .popular-item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid */
+        gap: 15px;
+    }
+}
